@@ -1,0 +1,18 @@
+.thumbnail .caption-full {
+    padding-left : 9px;
+}
+
+.input-group {
+    display : inline-flex;
+}
+
+#delete-form {
+    display : inline ;
+}
+
+#reelviu-btn {
+    color : #fff;
+    background-color : black;
+    margin-left: 0px;
+    margin-right: 17px;
+}

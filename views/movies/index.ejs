@@ -1,0 +1,40 @@
+<% include ../partials/header.ejs%>
+ 
+ <div class="container">
+     <div class="jumbotron">
+    <h1><span class="glyphicon glyphicon-film" aria-hidden="true"></span> Welcome to ReelViu</h1>
+     <p>Because everybody deserve honest reviews</p>
+     <form action="/moviesearch" method="GET">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search by Title..." style="width : 346px" name="search">
+            <p><a class="btn btn-primary btn-md" href="/moviesearch" role="button">Search for any movie</a></p>
+        </div>
+     </form>
+       
+  
+     <!--<a href="/new/review" class="btn btn-primary btn-lg ">Click here to add more reviews</a>-->
+ </div>
+    
+  <div class="row" style="display:flex ; flex-wrap : wrap ;">
+       <% movies.forEach(function(movies){  %>
+           <div class="col-md-3 col-sm-6">
+               <div class="thumbnail">
+                   <img src = "<%= movies.image %>">
+                   <div class="caption">
+                       <h4 style="text-align : center ;">  <%=movies.title%> (<%=movies.year%>) </h4>
+                   </div>
+                   <div class="buttons">
+                      <a style="margin-right: 10px;margin-left: 23px;" href="/moviebase/<%= movies._id %>" class="btn btn-md btn-default">Read More</a>
+                      <a id="reelviu-btn" href="/moviebase/<%= movies._id %>" class="btn btn-md btn-default">ReelViu It !</a>
+                   </div>
+                   
+                   
+               </div>
+           </div>
+            <% }); %> 
+     </div>
+  </div>
+             
+
+<% include ../partials/footer.ejs%>
+

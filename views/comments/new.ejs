@@ -1,0 +1,26 @@
+<% include ../partials/header.ejs%>
+
+
+<div class="container" >
+    <div class="row">
+       <h1 style="text-align : center">Add a comment to <%= movie.title %></h1>
+       <div style="margin : 0 auto ;width: 30%">
+            <form action="/moviebase/<%= movie._id%>/comments" method="POST">
+            
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Text" name="comment[text]">
+            </div>
+            
+            <div class="form-group">
+                 <button class="btn btn-lg btn-default btn-block">Click here to add</button>
+            </div>
+            
+           <a href="/moviebase">Go back</a> 
+        </form>
+       </div>
+      
+    </div>
+</div>
+
+
+<% include ../partials/footer.ejs%>
