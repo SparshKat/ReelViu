@@ -16,9 +16,10 @@ var     express         = require('express'),
 var     commentRoutes   = require('./routes/comments'),
         moviebaseRoutes = require('./routes/moviebase'),
         indexRoutes     = require('./routes/index');
-        
+     
+var port = process.env.PORT || 3000 ;
 		
-mongoose.connect("mongodb://localhost/reelviu" , { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/reelviu", { useUnifiedTopology: true } , { useNewUrlParser: true });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 // seedDB();
@@ -57,6 +58,6 @@ app.use(commentRoutes);
 app.use(moviebaseRoutes);
 
 //Listening to port
-app.listen(process.env.PORT , process.env.IP , function(){
-    console.log("Server has started");
+app.listen(port , process.env.IP , function(){
+    console.log(`Server has started at ${port}`);
 })
