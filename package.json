@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": {
+    "node": "12.11.1"
+  },
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sparsh",
@@ -22,7 +26,8 @@
     "mongodb": "^3.4.0",
     "mongoose": "^5.8.0",
     "nodemon": "^1.19.1",
-    "passport": "^0.4.0",
+    "passport": "^0.4.1",
+    "passport-http": "^0.3.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1",
     "request": "^2.88.0",

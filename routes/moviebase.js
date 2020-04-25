@@ -19,8 +19,10 @@ router.get("/moviebase" , function(req,res){
     });
 });
 
-router.get('/moviesearch' , function(req,res){
-    var title = req.query.search;
+router.post('/moviesearch', function(req,res){
+    var title = req.body.search;
+    // res.json(req.body.search);
+    // console.log("Title is  : " + title);
     request(`https://www.omdbapi.com/?apikey=9917d6e1&s="${title}"` , (err, response,body)=>{
         if(!err && response.statusCode == 200){
             var body = (JSON.parse(body)).Search;
@@ -45,13 +47,14 @@ router.post("/moviebase" , function(req,res){
         if(err){
             req.flash("error" , err.message)
         } else {
+            req.flash("success" , "Created new movie")
             res.redirect("/moviebase");
         }
     })
 });
 
 //SHOW A FORM FOR NEW MOVIE
-router.get("/moviebase/new" , (req,res)=>{
+router.get("/moviebase/new", middleware.isLoggedIn  , (req,res)=>{
    res.render('movies/new');
 })
 
