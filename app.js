@@ -58,6 +58,9 @@ app.use(commentRoutes);
 app.use(moviebaseRoutes);
 
 //Listening to port
-app.listen(port , process.env.IP , function(){
-    console.log(`Server has started at ${port}`);
-})
+app.set( 'port', ( process.env.PORT || 5000 ));
+
+// Start node server
+app.listen( app.get( 'port' ), function() {
+  console.log( 'Node server is running on port ' + app.get( 'port' ));
+  });
