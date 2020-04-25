@@ -4,10 +4,13 @@
      <div class="jumbotron">
     <h1><span class="glyphicon glyphicon-film" aria-hidden="true"></span> Welcome to ReelViu</h1>
      <p>Because everybody deserve honest reviews</p>
-     <form action="/moviesearch" method="GET">
+     <form action="/moviesearch" method="POST">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Search by Title..." style="width : 346px" name="search">
-            <p><a class="btn btn-primary btn-md" href="/moviesearch" role="button">Search for any movie</a></p>
+            <p>
+                <button class="btn btn-primary btn-md" type="submit" role="button">Search for any movie</button>
+                <!-- <a class="btn btn-primary btn-md" href="/moviesearch" role="button">Search for any movie</a> -->
+            </p>
         </div>
      </form>
        
