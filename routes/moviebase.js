@@ -10,6 +10,7 @@ var     router      = express.Router(),
         
         
 router.get("/moviebase" , function(req,res){
+    console.log("We are Here");
     Movie.find({} , (err, allMovies)=>{
         if(err){
             req.flash("error" , err.message);
