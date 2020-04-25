@@ -19,7 +19,7 @@ router.get("/moviebase" , function(req,res){
     });
 });
 
-router.post('/moviesearch' , function(req,res){
+router.post('/moviesearch', function(req,res){
     var title = req.body.search;
     // res.json(req.body.search);
     // console.log("Title is  : " + title);
@@ -47,13 +47,14 @@ router.post("/moviebase" , function(req,res){
         if(err){
             req.flash("error" , err.message)
         } else {
+            req.flash("success" , "Created new movie")
             res.redirect("/moviebase");
         }
     })
 });
 
 //SHOW A FORM FOR NEW MOVIE
-router.get("/moviebase/new" , (req,res)=>{
+router.get("/moviebase/new", middleware.isLoggedIn  , (req,res)=>{
    res.render('movies/new');
 })
 
