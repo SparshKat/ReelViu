@@ -12,7 +12,7 @@ Here is a working live demo :  https://reelviu.herokuapp.com/ (since it is free 
 
 ## Landing Page
 
-![](PC.gif)
+![](Landing.png)
 
 ## Instructions to Run
 
