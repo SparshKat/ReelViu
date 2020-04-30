@@ -1,39 +1,24 @@
 # ReelViu
 A self made project of an online movie database which not only provides with the information about the selected movie but also critically analyses the movie and also issues an audience rating for a specific movie.
 
-# Bulls and Bears
-
-Your favourite virtual share market simulation is back. Trade away!
-
-This year's edition is developed using Node.js and React and `yarn` is the package manager used. You need to have these on your local machine as prerequisites to start development. Follow the links below to install the requirements and read the documentation.
+This project has been developed using Node.JS and Bootstrap and `npm` is the package manager. You need to have these on your local machine as prerequisites to start development. Follow the links below to install the requirements and read the documentation.
 
 - [Yarn](https://yarnpkg.com/lang/en/)
 - [Node](https://nodejs.org/en/)
 
 ## Demo
-Here is a working live demo :  https://bull-and-bears19.herokuapp.com/ (since it is free version of heroku it is little slower)
+Here is a working live demo :  https://reelviu.herokuapp.com/ (since it is free version of heroku it is little slower)
 
 
 ## Landing Page
 
 ![](PC.gif)
 
-## Mobile support
-The WebApp is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
-
-<img src="mobile.gif" width="338px" height="731px"/>
-
 ## Instructions to Run
 
-1. `yarn install --production=false` to install the dependencies and dev dependencies. You need to be in the project root for this.
+1. `npm install --production=false` to install the dependencies and dev dependencies. You need to be in the project root for this.
 
-2. `yarn run start_dev` to start the development server
-
-3. `yarn run prod` to start the production server
-
-## Instructions to Run Tests
-
-  `yarn run test` to run tests
+2. `npm run` to start the development server or `nodemon app.js` to start a local development server.
 
   ## Instructions for contributors
 
@@ -42,8 +27,6 @@ The WebApp is compatible with devices of all sizes and all OS's, and consistent 
   3. Resolve an issue/introduce a feature and open a pull request
   4. The PR must be opened to the `develop` branch of this repository. **Do not make direct PRs to the master branch.**
   5. Please handle dependency versions cautiously. Do not install updated versions of dependencies in `package.json` while setting up your project. Try to use the `--exact` flag wherever possible. Read the docs for more info.
-  6. Create a file `secrets.json` in the project root exactly as `secrets-sample.json`, replacing the dummy fields with respective credentials. **Do not fill in your credentials anywhere else.**
-  7. `config.js` is the file which acts as a bridge between the project files, and its environment variables and secrets. Require the config file wherever necessary, **never** require `secrets.json` directly.
 
   ### Syncing your Fork
 
@@ -65,7 +48,6 @@ The WebApp is compatible with devices of all sizes and all OS's, and consistent 
 
 ## Built with 
 
-- [ReactJs](https://reactjs.org/) - React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
 - [NodeJs](https://nodejs.org/en/) -As an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications.
 - [MongoDB](https://www.mongodb.com/) -MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema.
 - [ExpressJs](https://expressjs.com/) -Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
