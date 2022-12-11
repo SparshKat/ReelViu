@@ -16,7 +16,7 @@
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
     "ejs": "^2.7.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-override": "^0.1.9",
     "express-session": "^1.15.6",
     "flash": "^1.1.0",
